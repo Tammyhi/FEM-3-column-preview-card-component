@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Lexend+Deca:wght@100..900&display=swap");
+
+/* CSS Reset */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+*:not(dialog) {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+}
+
+/* Design System */
+:root {
+  --clr-text-primary: hsl(0deg 0% 95%);
+  --clr-background-luxury: hsl(179deg 100% 13%);
+  --clr-icon-luxury: hsl(170deg 76% 41%);
+  --clr-background-sedans: hsl(31deg 77% 52%);
+  --clr-icon-sedans: hsl(42deg 100% 73%);
+  --clr-background-suvs: hsl(184deg 100% 22%);
+  --clr-icon-suvs: hsl(184deg 67% 45%);
+
+  --spacing-0: 0px;
+  --spacing-100: 8px;
+  --spacing-300: 3 * var(--spacing-100);
+  --spacing-400: 4 * var(--spacing-100);
+  --spacing-500: 5 * var(--spacing-100);
+  --spacing-600: 6 * var(--spacing-100);
+  --spacing-1000: 10 * var(--spacing-100);
+
+  --lh-heading: 120%;
+  --lh-text: 165%;
+}
