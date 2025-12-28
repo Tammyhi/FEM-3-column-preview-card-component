@@ -22,13 +22,10 @@ button {
 
 /* Design System */
 :root {
-  --clr-text-primary: hsl(0deg 0% 95%);
+  --clr-heading: hsl(0, 0%, 95%);
   --clr-background-luxury: hsl(179deg 100% 13%);
-  --clr-icon-luxury: hsl(170deg 76% 41%);
   --clr-background-sedans: hsl(31deg 77% 52%);
-  --clr-icon-sedans: hsl(42deg 100% 73%);
   --clr-background-suvs: hsl(184deg 100% 22%);
-  --clr-icon-suvs: hsl(184deg 67% 45%);
 
   --spacing-0: 0px;
   --spacing-100: 8px;
@@ -49,17 +46,75 @@ body {
 }
 
 main {
-  margin: 10vh;
+  height: 100%;
+  padding: clamp(2vw, 4vw + 1rem, 20vw);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  max-width: 100%;
+  overflow: hidden;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1010px) {
   main {
     grid-template-columns: 1fr;
   }
 }
 
 section {
+  padding: clamp(2rem, 4vw + 1rem, 15vw);
+  gap: 1.5rem;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+}
+
+button {
+  width: clamp(120px, 40vw + 2rem, 75%);
+  border-radius: 25px;
+  border-style: none;
   padding: 1rem;
+}
+
+section:not(.section-heading) {
+  font-family: "Lexend Deca", sans-serif;
+  line-height: var(--lh-text);
+}
+
+p:not(.section-heading) {
+  color: white;
+  opacity: 75%;
+}
+
+.section-heading {
+  font-family: "Big Shoulders", sans-serif;
+  color: var(--clr-heading);
+  font-weight: bold;
+  line-height: var(--lh-heading);
+  font-size: min(40px, 2rem + 5vw);
+  padding-top: 0.5rem;
+}
+
+.section-sedans {
+  background-color: var(--clr-background-sedans);
+  border-radius: 8px 0px 0px 8px;
+}
+
+.button-sedans {
+  color: var(--clr-background-sedans);
+}
+
+.section-suvs {
+  background-color: var(--clr-background-suvs);
+}
+
+.button-suvs {
+  color: var(--clr-background-suvs);
+}
+
+.section-luxury {
+  background-color: var(--clr-background-luxury);
+  border-radius: 0px 8px 8px 0px;
+}
+
+.button-luxury {
+  color: var(--clr-background-luxury);
 }
